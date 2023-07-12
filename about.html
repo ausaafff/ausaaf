@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+    body {
+        background-color: rgb(1, 1, 49);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    }
+    nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgb(2, 2, 78);
+            height: 55px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(210, 210, 250);
+            font-size: 1.04rem;
+        }
+
+    .wrapper {
+  height: 50px;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(7), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: rgb(145, 92, 182);
+  padding-top: 34px
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+    .me {
+        text-align: center;
+        padding-top: 27px;
+        padding-left: 73px;
+        padding-right: 95px;
+        color: white;
+
+    }
+
+    .abtimage {
+        border-radius: 8px;
+        display: flex;
+        height: 525px;
+        position: absolute;
+        margin-left: 489px;
+        margin-top: 27px;
+    }
+
+    .second h2 {
+        text-align: center;
+        display: flex;
+        padding-top: 571px;
+        padding-left: 157px;
+        color: rgb(155, 207, 190);
+    }
+        
+
+    .para p {
+        text-align: center;
+        padding-left:73px ;
+        padding-right: 95px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ausaaf's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html"> Services</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="typing-demo">
+          <h1>About Me</h1>
+        </div>
+    </div>
+    <div class="me">
+        <p>
+            Hi my name is AUSAAF AHMED i am a passionate web developer who enjoys travelling and stepping out,meeting
+            diffent people and getting to know them.As a passionate web developer, I am dedicated to creating innovative
+            and user-friendly websites that
+            seamlessly merge aesthetics with functionality.</p>
+    </div>
+    <div class="abtimage">
+        <img src="about.jpeg" alt="img not found" srcset="">
+    </div>
+    <div class="second">
+        <h2>Why did the web developer get arrested? They refused to keep their
+            CSS in style!</h2>
+            <div class="para">
+        <p> With a strong foundation in HTML, CSS, and JavaScript, I
+            thrive in leveraging cutting-edge technologies and frameworks to build responsive and interactive web
+            applications. I am highly motivated, detail-oriented, and committed to delivering high-quality code and
+            meeting project deadlines. Collaborative by nature, I enjoy working in cross-functional teams to develop
+            creative solutions and contribute to a positive and inclusive work environment. Constantly seeking growth
+            and learning opportunities, I stay updated on the latest industry trends and best practices to ensure my
+            work aligns with modern web development standards. My goal is to utilize my skills and expertise to
+            contribute to the success of projects and create impactful digital experiences for users.</p>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
