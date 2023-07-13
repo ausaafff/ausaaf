@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background: rgb(1, 1, 49);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    form{
+        background: rgb(159, 236, 211);
+        display: flex;
+        flex-direction: column;
+        padding: 2vw 4vw;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+    form h3{
+        color: #555;
+            font-weight: 800;
+            margin-bottom: 20px;
+    }
+    form input, form textarea{
+        border: 0;
+        margin: 10px 0;
+        padding: 20px;
+        outline: none;
+        background: white;
+        font-size: 16px; 
+
+    }
+    form button{
+        padding: 15px;
+        background: rgb(145, 92, 182)   ;
+        color: white;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        width: 150px;
+        margin: 20px auto 0;
+        border-radius: 8px;
+    }
+    nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgb(2, 2, 78);
+            height: 55px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(210, 210, 250);
+            font-size: 1.04rem;
+        }
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="left">Ausaaf's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html"> Services</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text" id="phone" placeholder="Your Phone Number" required>
+            <textarea  id="message"  rows="4" placeholder="How can i help you?"></textarea>
+            <button type="submit">Send</button>
+
+
+        </form>
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "aleemshaikh856@gmail.com",
+    Password : "09F5236B399E1BA93E22318702E7D209EF95",
+    To : 'shk.ausaaf@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Enquiry",
+    Body : " Name: "+ document.getElementById("name").value
+}).then(
+  message => alert(message)
+);
+        }
+    </script>
+    
+</body>
+</html>
